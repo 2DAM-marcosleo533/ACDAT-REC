@@ -16,17 +16,17 @@ public class App {
 
         if (!propertiesFile.exists()) {
             System.err.println("El archivo no existe.");
-            return;
-        }
 
-        if (!propertiesFile.isFile() || !archivo.endsWith(".properties")) {
+        } else if(!propertiesFile.isFile() || !archivo.endsWith(".properties")){
             System.err.println("No es un archivo o no es un archivo .properties");
-            return;
+        } else{
+            GestorProperties gestor = new GestorProperties(propertiesFile);
+
+            gestor.leerPropiedad("tamanio-fuente");
+            gestor.mostrarPropiedades();
         }
 
-        GestorProperties gestor = new GestorProperties(propertiesFile);
 
-        gestor.leerPropiedad("tamanio-fuente");
-        gestor.mostrarPropiedades();
+
     }
 }
