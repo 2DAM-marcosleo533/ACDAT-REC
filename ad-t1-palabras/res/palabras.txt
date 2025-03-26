@@ -1,4 +1,4 @@
-gato
+gato tigre perro
 perro
 tigre
 ciervo

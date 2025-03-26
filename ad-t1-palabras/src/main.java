@@ -28,12 +28,13 @@ public class main {
 
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                String[] palabras = line.split("\\s+");
+                String[] palabras = line.split(" ");
                 StringBuilder nuevaLinea = new StringBuilder();
                 for (String p : palabras) {
                     if (p.equalsIgnoreCase(palabra)) {
                         cont++;
                     } else {
+
                         nuevaLinea.append(p).append(" ");
                     }
                 }
