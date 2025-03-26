@@ -1,0 +1,5 @@
+pikachu;5;4;3;true
+bulbasaur;5;3;4;true
+squirtle;4;3;3;true
+charmander;4;3;3;true
+mew;10;9;9;false
