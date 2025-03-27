@@ -1,60 +1,53 @@
 package iesmm.ad.t1_03;
 
+import iesmm.ad.t1_03.model.Pokemon;
+
 import java.io.*;
 import java.util.Scanner;
 
 public class PokemonGenera2 {
     public static void main(String[] args) {
-        try {
-            // Definimos los archivos de entrada y salida
-            File inputFile = new File("res" + File.separator + "pokemons.txt");
-            File outputFile = new File("res" + File.separator + "pokemons.dat");
+        // Definimos los archivos de entrada y salida
+        File inputFile = new File("res" + File.separator + "pokemons.txt");
+        File outputFile = new File("res" + File.separator + "pokemons.dat");
 
-            // Vemos si es txt existe
-            if (!inputFile.exists()) {
-                throw new FileNotFoundException("El archivo de entrada no existe: " + inputFile.getAbsolutePath());
+        if (inputFile.exists()) {
+            try (BufferedReader fileReader = new BufferedReader(new FileReader(inputFile));
+                 ObjectOutputStream objectWriter = new ObjectOutputStream(new FileOutputStream(outputFile))) {
+
+                String line;
+                while ((line = fileReader.readLine()) != null) {
+                    // Separamos los datos por ;
+                    String[] pokemonData = line.split(";");
+
+                    if (pokemonData.length == 5) {
+                        String nombre = pokemonData[0];
+                        int vida = Integer.parseInt(pokemonData[1]);
+                        int ataque = Integer.parseInt(pokemonData[2]);
+                        int defensa = Integer.parseInt(pokemonData[3]);
+                        boolean evoluciona = Boolean.parseBoolean(pokemonData[4]);
+
+                        // Creamos el objeto
+                        Pokemon pokemon = new Pokemon(nombre, vida, ataque, defensa, evoluciona);
+
+                        // Escribimos el objeto Pokemon en el archivo binario
+                        objectWriter.writeObject(pokemon);
+                    } else {
+                        System.err.println("Formato incorrecto en la línea: " + line);
+                    }
+                }
+
+                System.out.println("Fichero binario generado en: " + outputFile.getAbsolutePath());
+
+            } catch (FileNotFoundException e) {
+                System.err.println("Error: " + e.getMessage());
+            } catch (IOException e) {
+                System.err.println("Error al generar el fichero binario: " + e.getMessage());
+            } catch (Exception e) {
+                System.err.println("Error al procesar los datos: " + e.getMessage());
             }
-
-            // flujo de salida binario
-            DataOutputStream fichero = new DataOutputStream(new FileOutputStream(outputFile));
-
-            // bufferedReader del archivo txt
-            BufferedReader fileReader = new BufferedReader(new FileReader(inputFile));
-
-            String line;
-            while ((line = fileReader.readLine()) != null) {
-                // separamos los datos por ;
-                String[] pokemonData = line.split(";");
-
-
-                    String nombre = pokemonData[0];
-                    int vida = Integer.parseInt(pokemonData[1]);
-                    int ataque = Integer.parseInt(pokemonData[2]);
-                    int defensa = Integer.parseInt(pokemonData[3]);
-                    boolean evoluciona = Boolean.parseBoolean(pokemonData[4]);
-
-                    // Escribimos los datos en el archivo binario
-                    fichero.writeUTF(nombre);
-                    fichero.writeInt(vida);
-                    fichero.writeInt(ataque);
-                    fichero.writeInt(defensa);
-                    fichero.writeBoolean(evoluciona);
-                    fichero.writeBoolean(evoluciona);
-
-            }
-
-            // Cerramos los flujos
-            fichero.close();
-            fileReader.close();
-
-            System.out.println("Fichero binario generado en: " + outputFile.getAbsolutePath());
-
-        } catch (FileNotFoundException e) {
-            System.err.println("Error: " + e.getMessage());
-        } catch (IOException e) {
-            System.err.println("Error al generar el fichero binario: " + e.getMessage());
-        } catch (Exception e) {
-            System.err.println("Error al procesar los datos: " + e.getMessage());
+        } else {
+            System.err.println("El archivo txt no existe");
         }
     }
 }
