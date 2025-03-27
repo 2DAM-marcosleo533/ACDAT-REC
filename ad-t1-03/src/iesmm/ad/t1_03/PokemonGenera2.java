@@ -33,7 +33,7 @@ public class PokemonGenera2 {
                         // Escribimos el objeto Pokemon en el archivo binario
                         objectWriter.writeObject(pokemon);
                     } else {
-                        System.err.println("Formato incorrecto en la línea: " + line);
+                        System.err.println("No son 5 datos");
                     }
                 }
 
