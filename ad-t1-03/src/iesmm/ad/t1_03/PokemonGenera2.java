@@ -39,6 +39,7 @@ public class PokemonGenera2 {
 
                 System.out.println("Fichero binario generado en: " + outputFile.getAbsolutePath());
 
+                //Excepciones
             } catch (FileNotFoundException e) {
                 System.err.println("Error: " + e.getMessage());
             } catch (IOException e) {
@@ -46,7 +47,9 @@ public class PokemonGenera2 {
             } catch (Exception e) {
                 System.err.println("Error al procesar los datos: " + e.getMessage());
             }
-        } else {
+        }
+        //Si el archivo no existe, hacemos que salte un error
+        else {
             System.err.println("El archivo txt no existe");
         }
     }
