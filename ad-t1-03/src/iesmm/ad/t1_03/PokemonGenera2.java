@@ -3,7 +3,6 @@ package iesmm.ad.t1_03;
 import iesmm.ad.t1_03.model.Pokemon;
 
 import java.io.*;
-import java.util.Scanner;
 
 public class PokemonGenera2 {
     public static void main(String[] args) {
@@ -11,10 +10,13 @@ public class PokemonGenera2 {
         File inputFile = new File("res" + File.separator + "pokemons.txt");
         File outputFile = new File("res" + File.separator + "pokemons.dat");
 
-        if (inputFile.exists()) {
-            try (BufferedReader fileReader = new BufferedReader(new FileReader(inputFile));
-                 ObjectOutputStream objectWriter = new ObjectOutputStream(new FileOutputStream(outputFile))) {
+        try (
+                BufferedReader fileReader = new BufferedReader(new FileReader(inputFile));
+                ObjectOutputStream objectWriter = new ObjectOutputStream(new FileOutputStream(outputFile))) {
 
+            if (!inputFile.exists()) {
+                System.err.println("El archivo txt no existe");
+            } else {
                 String line;
                 while ((line = fileReader.readLine()) != null) {
                     // Separamos los datos por ;
@@ -38,19 +40,13 @@ public class PokemonGenera2 {
                 }
 
                 System.out.println("Fichero binario generado en: " + outputFile.getAbsolutePath());
-
-                //Excepciones
-            } catch (FileNotFoundException e) {
-                System.err.println("Error: " + e.getMessage());
-            } catch (IOException e) {
-                System.err.println("Error al generar el fichero binario: " + e.getMessage());
-            } catch (Exception e) {
-                System.err.println("Error al procesar los datos: " + e.getMessage());
             }
-        }
-        //Si el archivo no existe, hacemos que salte un error
-        else {
-            System.err.println("El archivo txt no existe");
+        } catch (FileNotFoundException e) {
+            System.err.println("Error: " + e.getMessage());
+        } catch (IOException e) {
+            System.err.println("Error al generar el fichero binario: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Error al procesar los datos: " + e.getMessage());
         }
     }
 }
