@@ -9,7 +9,7 @@ public class GestorFichero {
     }
 
     //muestra el contenido del fichero creado
-    public static void mostrar() {
+    public void mostrar() {
         try (BufferedReader br = new BufferedReader(new FileReader("res/fichero.txt"))) {
             String linea;
             while ((linea = br.readLine()) != null) {
@@ -21,20 +21,21 @@ public class GestorFichero {
     }
 
     //coger el fochero e insertar una cadena en el mismo fichero al final de este
-    public static boolean insertar(String cad) {
+    public boolean insertar(String cad) {
+        boolean bool = false;
         try {
             FileWriter escritura = new FileWriter("res/fichero.txt", true);
             escritura.write(cad);
             escritura.close();
-            return true;
+            bool = true;
         } catch (IOException e) {
             e.printStackTrace();
-            return false;
         }
+        return bool;
     }
 
     //busca una cadena en el fichero
-    public static boolean buscar(String cad) {
+    public boolean buscar(String cad) {
         boolean bool = false;
         try (BufferedReader br = new BufferedReader(new FileReader("res/fichero.txt"))) {
             String linea;
@@ -45,14 +46,14 @@ public class GestorFichero {
             }
         } catch (IOException e) {
             System.out.println("Error al leer el archivo: " + e.getMessage());
-            bool = false;
+           // bool = false; Ya es false de por si
         }
 
         return bool;
     }
 
     //coge una cadena del fichero y la sustituye por otra, pintandolo en un nuevo fichero, devuelve el numero de veces que se ha sustituido
-    public static int actualizar(String cad, String cad2) {
+    public int actualizar(String cad, String cad2) {
         int cont = 0;
 
         try (BufferedReader br = new BufferedReader(new FileReader("res/fichero.txt"))) {
@@ -82,7 +83,7 @@ public class GestorFichero {
 
 
     //elimina una cadena del fichero, pintandolo en un nuevo fichero, devuelve el numero de veces que se ha eliminado
-    public static int eliminar(String cad) {
+    public int eliminar(String cad) {
         int cont = 0;
 
         try (BufferedReader br = new BufferedReader(new FileReader("res/fichero.txt"))) {
