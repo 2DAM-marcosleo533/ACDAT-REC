@@ -20,7 +20,7 @@ public class GestorFichero {
         }
     }
 
-    //coger el focher e insertar una cadena en el mismo fichero al final de este
+    //coger el fochero e insertar una cadena en el mismo fichero al final de este
     public static boolean insertar(String cad) {
         try {
             FileWriter escritura = new FileWriter("res/fichero.txt", true);
