@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class GestorFichero {
     private File f;
-    Scanner sc = new Scanner(System.in);
 
     public GestorFichero(File f) {
         this.f = f;
@@ -46,7 +45,7 @@ public class GestorFichero {
             }
         } catch (IOException e) {
             System.out.println("Error al leer el archivo: " + e.getMessage());
-            bool= false;
+            bool = false;
         }
 
         return bool;
@@ -78,7 +77,7 @@ public class GestorFichero {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    return cont;
+        return cont;
     }
 
 
