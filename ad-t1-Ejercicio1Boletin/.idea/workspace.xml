@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5b8109dd-202a-4c6b-b919-d715e56e58d5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/res/productos.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GestionaProductos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Producto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ProductosApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ad-t1-Ejercicio2Boletin/res/sessions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ad-t1-Ejercicio2Boletin/res/users.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ad-t1-Ejercicio2Boletin/src/GestionarSAX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ad-t1-Ejercicio2Boletin/src/ManejadorSAXSesiones.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ad-t1-Ejercicio3Boletin/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ad-t1-Ejercicio3Boletin/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ad-t1-Ejercicio3Boletin/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ad-t1-Ejercicio3Boletin/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ad-t1-Ejercicio3Boletin/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ad-t1-Ejercicio3Boletin/res/juegos.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ad-t1-Ejercicio3Boletin/src/ConsultasInventario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ad-t1-Ejercicio3Boletin/src/ProcesadorXPath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ad-t1-pokemon/out/production/ad-t1-pokemon/GestionaPokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ad-t1-pokemon/out/production/ad-t1-pokemon/GestionaPokemon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ad-t1-pokemon/src/GestionaPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ad-t1-pokemon/src/GestionaPokemon.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2x36vwV322txNuMId82d8voDHMM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/usuario/Desktop/ACDAT-REC/ad-t1-Ejercicio3Boletin",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5b8109dd-202a-4c6b-b919-d715e56e58d5" name="Changes" comment="" />
+      <created>1747154647405</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747154647405</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

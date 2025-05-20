@@ -15,7 +15,7 @@ public class GestionaPokemon {
             while ((linea = br.readLine()) != null) {
                 String[] datos = linea.split(",");
                 if (datos[2].equals(tipo)) {
-                    listaPokemon.add("Pokemon: " + datos[1] + ", Tipo: " + datos[2]);
+                    listaPokemon.add("Pokemon: " + datos[1]);
                 }
             }
                 Collections.sort(listaPokemon);

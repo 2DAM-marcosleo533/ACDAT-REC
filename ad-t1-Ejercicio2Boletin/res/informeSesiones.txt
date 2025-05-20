@@ -1,0 +1,5 @@
+Nº de sesiones registradas: 2
+Nº de sesiones en ejecución en el sistema: 1
+Usuarios conectados entre las 9:00 y las 14:00:
+  - ID156 (10:20:50)
+  - PR12 (09:20:00)
